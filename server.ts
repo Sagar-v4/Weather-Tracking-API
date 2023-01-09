@@ -26,5 +26,5 @@ app.use((req, res) => {
 
 // Listening Port
 app.listen(port, localhost, () => {
-    console.log(`Sever started at http://${localhost}:${port} \nSearch weather at http://${localhost}:${port}/city/`)
+    console.log(`Sever started at http://${localhost}:${port} \nSearch weather at http://${localhost}:${port}/city/ \nIf today is prime day data will not show..so go to -> controller -> line 14 make checkPrimeCondition = false`)
 })
