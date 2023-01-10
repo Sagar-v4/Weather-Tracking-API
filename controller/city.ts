@@ -11,14 +11,14 @@ const Audit = require("../model/audit")
  * TRUE: Check Prime day
  * FALSE: Not Check Prime Day
  */
-let checkPrimeCondition: boolean = false
+let checkPrimeCondition: boolean = true
 
 /*
  * Showing default City
  */
 const defaultCity = async (req: any, res: any) => {
 
-    if(isPrimeDay(checkPrimeCondition)) {
+    if(!isPrimeDay(checkPrimeCondition)) {
 
         try {
             const cityName: string = "Gandhinagar"
@@ -75,7 +75,7 @@ const defaultCity = async (req: any, res: any) => {
  */
 const searchCity = async (req: any, res: any) => {
 
-    if(isPrimeDay(checkPrimeCondition)) {
+    if(!isPrimeDay(checkPrimeCondition)) {
 
         try {
             const cityName: string = req.params.city
